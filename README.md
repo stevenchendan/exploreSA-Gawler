@@ -28,19 +28,25 @@ This dataset plays an important role in the whole data pool used for predicting 
 
 
 
-### How to use
+### Installation and Packages
 
-Step 1. Install Python 3.7
+Step 1. Install Python 3.6 and use pip install packagenames to install the following packages:
+ 1. set up the jupyter notebook environment
+ 2. pandas
+ 3. zipfile
+ 
+     or optionally, install Anaconda and use conda install packagenames
 
-Step 2. Install Anaconda(optional)
+Step 2. run the ipynb files according to the filenames order:
+     a) execute "1. RS_Data_Processing.ipynb" from the beginning until the dropdown box and the code will download the datafiles from the link: https://unearthed-exploresa.s3-ap-southeast-2.amazonaws.com/Unearthed_5_SARIG_Data_Package.zip if the zip file does not exist in the directory './data'
+     b) select the element you are interested from the dropdown box, then continue to 'Run ALL Below'. The code will generate two csv files: 'rs_chem_site_sample_num.csv'and 'extracted_rs_data.csv' and save them to a subdirectory of './data', named after the element you selected; e.g., 'Fe'. The former includes the 'SITE_NO' and 'SAMPLE_NO' corresponding to the element you selected above, while the latter is the rs data related to this element.
+     c) execute "2. Drillhole_Data_Processing.ipynb", "3. Field_Observation_Data_Processing.ipynb" and "4. MD_Data_Processing.ipynb" will generate the corresponding drillhole data, field observation data and mineral deposit data and save to directory corresponding to the element.      d) further merge the data files to get the work datasets.  
 
-Step 3. Download dataset: https://unearthed-exploresa.s3-ap-southeast-2.amazonaws.com/Unearthed_5_SARIG_Data_Package.zip
-
-The idea of this repo is to show people the cleaning data process we have done until now. There are still a lot of work to do. We will update it afterwards.
+The idea of this repo is to show people the cleaning data process we have done until now. There are still a lot of work to do. We will keep updating the data preparation and our dat engineering results.
 
 
 
-### To be continue
+### To continue
 
 
 
